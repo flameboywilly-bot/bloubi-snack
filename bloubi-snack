@@ -417,9 +417,9 @@ const STORE = {
   saveSettings(s){try{localStorage.setItem(this.K_SET,JSON.stringify(s));}catch{}},
   loadSettings(){try{const r=localStorage.getItem(this.K_SET);return r?JSON.parse(r):{};}catch{return{};}}
 };
-
+ 
 function defP(u){return{username:u,ph:'',coins:0,score:0,ws:0,ts:0,kills:0,games:0,skin:{color:COLS[0],face:'😀',acc:null},owned:[],v:3,createdAt:Date.now(),lastLogin:Date.now()}}
-
+ 
 // Charge la DB au démarrage (fusion migration incluse)
 let DB=STORE.load();
 let CU=null;
